@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Ifma.play</title>
+
+</head>
+
+<body>
+    <!--navegação-->
+    <section class="jumbotron" style="height: 750px;">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+                <div class="container">
+                    <a class="navbar-brand js-scroll-trigger " href="../html/inicial.html">
+                        <h5 class="text-white">Ifma.play</h5>
+                    </a>
+                    <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded"
+                        type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        Menu
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item mx-0 mx-lg-1">
+                                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white"
+                                    href="../html/cadastrar.html">Cadastrar</a>
+                            </li>
+                            <li class="nav-item mx-0 mx-lg-1">
+                                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white"
+                                    href="../html/editar.html">Editar</a>
+                            </li>
+                            <li class="nav-item mx-0 mx-lg-1">
+                                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white"
+                                    href="#sair">Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div>
+
+            <div class="row" style="height: 685px ">
+                <div class="col-2 text-center mt-5 ">
+
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 " href="../html/inicial.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 " href="../html/musicaalbum.html">Música por
+                                Album</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 " href="../html/musica_artista.html">Música por
+                                Artista</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-10 text-center bg-secondary">
+                    <div class=" container ">
+                        <h1 class="mt-5">Cadastro Artista/música</h1>
+                        <p>Complete os campos</p>
+                        <h2>Artista</h2>
+
+                        <form action="/action_page.php">
+                            <div class="custom-control custom-checkbox mb-3">
+
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">Autor</label>
+                            </div>
+                            <input type="checkbox" id="defaultCheck" name="example2">
+                            <label for="defaultCheck">Interprete</label>
+                            <br>
+                        </form>
+                        <div>
+                            <form class=" /action_page.php form-inline">
+                                <div class="row">
+                                    <label for="nomeArtista" class="mr-sm-2" class="label label-info"
+                                        style="color:#fff">Nome do Artista:</label>
+                                    <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter com o nome"
+                                        id="nomeArtista">
+                                    <label for="album" class="mr-sm-2" class="label label-info"
+                                        style="color:#fff">Album:</label>
+                                    <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter com o nome"
+                                        id="album">
+                                </div>
+                                <br>
+                                <br>
+                                <div class="row">
+                                    <label for="dataNascimento" class="mr-sm-2" class="label label-info"
+                                        style="color:#fff">
+                                        DataNascimento:</label>
+                                    <input type="date" class="form-control mb-2 mr-sm-2" placeholder="Enter com o nome"
+                                        id="dataNascimento">
+                                    <label for="nacionalidade" class="mr-sm-2" class="label label-info"
+                                        style="color:#fff">
+                                        Nacionalidade:</label>
+                                    <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter com o nome"
+                                        id="nacionalidade">
+                                </div>
+                                <br>
+                                <br>
+
+                                <button type="submit" class="btn btn-primary mt-5 ml-5">Submit</button>
+                            </form>
+
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </section>
+    <footer class=" text-center">
+        Todos os direitos reservados a Leonardo Barboza
+        e Joziel Monteiro
+    </footer>
+
+
+
+</body>
+
+</html>
