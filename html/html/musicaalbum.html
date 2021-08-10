@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Ifma.play</title>
+
+</head>
+
+<body>
+    <!--navegação-->
+    <section class="jumbotron" style="height: 750px;">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+                <div class="container">
+                    <a class="navbar-brand js-scroll-trigger " href="../html/inicial.html">
+                        <h5 class="text-white">Ifma.play</h5>
+                    </a>
+                    <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded"
+                        type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        Menu
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item mx-0 mx-lg-1">
+                                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white"
+                                    href="../html/cadastrar.html">Cadastrar</a>
+                            </li>
+                            <li class="nav-item mx-0 mx-lg-1">
+                                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white"
+                                    href="../html/editar.html">Editar</a>
+                            </li>
+                            <li class="nav-item mx-0 mx-lg-1">
+                                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white"
+                                    href="#sair">Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div>
+
+            <div class="row" style="height: 685px ">
+                <div class="col-2 text-center mt-5 ">
+
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 " href="../html/inicial.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 " href="../html/musicaalbum.html">Música por
+                                Album</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 " href="../html/musica_artista.html">Música por
+                                Artista</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-10 text-center ">
+                    <div class="container mt-3">
+                        <h2>Lista de Música</h2>
+                        <p>Procure sua musica:</p>
+                        <input class="form-control " id="myInput" type="text" placeholder="procurar">
+                        <br>
+                        <table class="table table-bordered table-hover table-dark">
+                            <thead>
+                                <tr>
+                                    <th>Título da faixa</th>
+                                    <th>Arista</th>
+                                    <th>Gênero</th>
+                                    <th>Duração</th>
+                                    <th>Tocar</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="myTable">
+                                <tr>
+                                    <td>Yu-City Kamata</td>
+                                    <td>Dan Bodan</td>
+                                    <td>Pop</td>
+                                    <td>2:20</td>
+                                    <td><a href="../musicas/Yu-City Kamata - Dan Bodan.mp3"
+                                            style="text-decoration: none;">Tocar</td>
+                                </tr>
+                                <tr>
+                                    <td>Yellow Rose of Berkeley</td>
+                                    <td>Rondo Brothers</td>
+                                    <td>Pop</td>
+                                    <td>1:32</td>
+                                    <td>
+                                        <a href="../musicas/Yellow Rose of Berkeley - Rondo Brothers.mp3 "
+                                            style="text-decoration: none;">Tocar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Young Squire</td>
+                                    <td>TrackTribe</td>
+                                    <td>Alternativo e punk</td>
+                                    <td>1:49</td>
+                                    <td>
+                                        <a href="../musicas/Young Squire - TrackTribe.mp3"
+                                            style="text-decoration: none;">Tocar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Yard Of Pans</td>
+                                    <td>Freedom Trail Studio</td>
+                                    <td>Reggae</td>
+                                    <td>3:09</td>
+                                    <td>
+                                        <a href="#" style="text-decoration: none;">Tocar</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <footer class=" text-center">
+        Todos os direitos reservados a Leonardo Barboza
+        e Joziel Monteiro
+        <script>
+            $(document).ready(function () {
+                $("#myInput").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable tr").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+    </footer>
+
+
+
+</body>
+
+</html>
